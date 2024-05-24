@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(13, 2, 54);
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.crud {
+  width: 80%;
+  margin: auto;
+}
+.head {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0 px;
+}
+.ud {
+  width: 45%;
+  align-items: center;
+}
+#total {
+  background-color: rgb(113, 26, 26);
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  width: 25%;
+}
+#total::before {
+  content: 'Total: ';
+}
+.form-control {
+  color: white;
+}
+
+.table {
+  background-color: rgb(16, 117, 117);
+}
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  table {
+    width: 100%; /* Ensures the table takes up the full width on small screens */
+  }
+  table th,
+  table td {
+    display: block; /* Make each cell a block element */
+    width: 100%; /* Make each cell take up the full width */
+    text-align: right; /* Align text to the right for better readability */
+  }
+  table th::before,
+  table td::before {
+    float: left;
+    text-align: left;
+    font-weight: bold;
+  }
+  table th::before {
+    content: attr(data-th);
+  }
+  table td::before {
+    content: attr(data-label);
+  }
+  table td[data-label='Action'] {
+    text-align: center; /* Center the action buttons */
+  }
+}
+
+/* @media screen and (max-width: 992px) {
+      .table-responsive {
+        overflow-x: auto; 
+      }
+      table {
+        width: 100%; 
+        display: block; 
+        overflow-x: auto; 
+      }
+      table th, table td {
+        display: block; 
+        width: 100%; 
+        text-align: right; 
+      }
+      table th::before, table td::before {
+        float: left;
+        text-align: left;
+        font-weight: bold;
+      }
+      table th::before {
+        content: attr(data-th);
+      }
+      table td::before {
+        content: attr(data-label);
+      }
+      table td[data-label="Action"] {
+        text-align: center; 
+      }} */
